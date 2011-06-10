@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "tictactien-gem"
   gem.homepage = "http://github.com/nht007/tictactien-gem"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = "Tic-Tac-Toe game in Ruby"
+  gem.description = "Tic-Tac-Toe game in Ruby..."
   gem.email = "nht007@gmail.com"
   gem.authors = ["Tien H. Nguyen"]
   # dependencies defined in Gemfile
