@@ -59,4 +59,20 @@ class ConsoleGame < Game
       end
     end
   end
+  
+  def ask_move(board, token)
+    row, col = nil, nil
+
+    while !board.validate_move([row, col])
+      puts "Player '#{token}', choose a row (1-3).\n"
+      row_input = $stdin.gets.strip
+      row = row_input.to_i if ('1'..'3').include? row_input
+
+      puts "Player '#{token}', choose a column (1-3).\n"
+      col_input = $stdin.gets.strip
+      col = col_input.to_i if ('1'..'3').include? col_input
+    end
+    
+    return [row-1, col-1]
+  end
 end

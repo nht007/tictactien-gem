@@ -26,15 +26,21 @@ class Board
     spaces
   end
   
+  def validate_move(location)
+    if location.first && location.last
+      return @grid[location.first][location.last].nil?
+    end
+  end
+  
   # adds a piece to the grid
   # indexes start at 0 from the top left corner of the grid
   def add_piece(player_token, location)
-    if @grid[location.first][location.last]
-      return false   
+    if validate_move(location)
+      @grid[location.first][location.last] = player_token  
+      return true
+    else
+      return false
     end
-  
-    @grid[location.first][location.last] = player_token  
-    return true
   end
   
   # determines if there is a winning player and returns that player token

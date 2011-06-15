@@ -1,1 +1,14 @@
-Dir["../lib/*.rb"].each {|file| require file }
+# Dir["../lib/*.rb"].each {|file| require file }
+# require '../lib/tictactien-gem'
+require '../lib/board'
+require '../lib/game'
+require '../lib/console_game'
+require '../lib/ai'
+require '../lib/player'
+require '../lib/human_player'
+require '../lib/cpu_player'
+require '../lib/minimax'
+require '../lib/perfect_ai'
+require '../lib/random_ai'
+require '../lib/player_factory'
+require '../lib/game_state'
