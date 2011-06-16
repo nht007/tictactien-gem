@@ -13,6 +13,9 @@ require 'player_factory'
 require 'game_state'
 
 module Tictactien
+  def self.new_game
+    RailsGame.new
+  end
 #  HUMAN = PlayerFactory::HUMAN
 #  RANDOM_CPU = PlayerFactory::RANDOM_CPU
 #  PERFECT_CPU = PlayerFactory::PERFECT_CPU
