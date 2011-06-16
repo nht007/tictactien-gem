@@ -1,4 +1,4 @@
-require '../lib/ai.rb'
+#require '../lib/ai.rb'
 
 describe "Ai" do
   

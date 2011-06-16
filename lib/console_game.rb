@@ -3,7 +3,7 @@ class ConsoleGame < Game
     @players[:one] = choose_player('x')
     @players[:two] = choose_player('o')
     
-    @game_state = GameState.new(Board.new, @players[:one])
+    @game_state = GameState.new(@players[:one])
     
     game_loop
   end

@@ -1,4 +1,4 @@
-require '../lib/player'
+#require '../lib/player'
 
 describe "Player" do
   it "has a player token" do
