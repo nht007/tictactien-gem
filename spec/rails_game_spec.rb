@@ -36,4 +36,32 @@ describe "RailsGame" do
     
     rails_game.game_state.active_player.should == rails_game.players[:one]
   end
+  
+  it "updates its state with a new move" do
+    rails_game = RailsGame.new
+    rails_game.choose_player_one("Human")
+    rails_game.choose_player_two("RandomCPU")
+    
+    rails_game.start
+    
+    move = mock('move', :first => 0, :last => 0)
+    rails_game.game_state.should_receive(:update).with(move)
+    rails_game.stub!(:switch_active_player)
+    
+    rails_game.update(move)    
+  end
+  
+  it "updates its state by switching the active player" do
+    rails_game = RailsGame.new
+    rails_game.choose_player_one("Human")
+    rails_game.choose_player_two("RandomCPU")
+    
+    rails_game.start
+    
+    move = mock('move', :first => 0, :last => 0)
+    rails_game.game_state.stub!(:update).with(move)
+    rails_game.should_receive(:switch_active_player)
+    
+    rails_game.update(move)
+  end
 end

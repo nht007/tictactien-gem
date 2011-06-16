@@ -11,6 +11,11 @@ class RailsGame < Game
     @game_state = GameState.new(@players[:one])
   end
   
+  def update(move)
+    @game_state.update(move)
+    switch_active_player
+  end
+  
   private
   
   def choose_player(type, token)

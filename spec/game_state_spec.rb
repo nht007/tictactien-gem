@@ -10,4 +10,14 @@ describe "GameState" do
     game_state.board.should == board
     game_state.active_player.should == active_player
   end
+  
+  it "updates its board state with a new move" do
+    board = Board.new
+    active_player = Player.new('x')
+    game_state = GameState.new(board, active_player)
+    
+    move = mock('move', :first => 0, :last => 0)
+    game_state.board.should_receive(:add_piece).with(game_state.active_player.token, move)
+    game_state.update(move)
+  end
 end
