@@ -1,5 +1,6 @@
 require 'board'
 require 'game'
+require 'rails_game'
 require 'console_game'
 require 'ai'
 require 'player'
