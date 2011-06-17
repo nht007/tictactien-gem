@@ -16,6 +16,10 @@ class RailsGame < Game
     switch_active_player
   end
   
+  def print_board
+    @game_state.board.print
+  end
+  
   private
   
   def choose_player(type, token)

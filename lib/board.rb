@@ -52,10 +52,7 @@ class Board
   end
   
   def print
-    puts "\n"
-    puts "#{@grid[0]}\n"
-    puts "#{@grid[1]}\n"
-    puts "#{@grid[2]}\n"
+    "\n#{@grid[0]}\n#{@grid[1]}\n#{@grid[2]}\n"
   end
   
   private

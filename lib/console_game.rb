@@ -14,7 +14,7 @@ class ConsoleGame < Game
     running = true
     
     while running
-      @game_state.board.print
+      puts @game_state.board.print
 
       winner = @game_state.board.calculate_win
       if winner

@@ -64,4 +64,16 @@ describe "RailsGame" do
     
     rails_game.update(move)
   end
+  
+  it "prints the current board" do
+    rails_game = RailsGame.new
+    rails_game.choose_player_one("Human")
+    rails_game.choose_player_two("RandomCPU")
+    
+    rails_game.start
+    
+    rails_game.game_state.board.should_receive(:print)
+    
+    rails_game.print_board
+  end
 end
