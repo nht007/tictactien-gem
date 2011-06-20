@@ -6,6 +6,10 @@ class GameState
     @active_player = active_player
   end
   
+  def perform_move(move)
+    @active_player.perform_move(self, move)
+  end
+  
   def update(move)
     return @board.add_piece(@active_player.token, move)
   end

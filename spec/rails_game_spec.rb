@@ -59,7 +59,7 @@ describe "RailsGame" do
     rails_game.start
     
     move = mock('move', :first => 0, :last => 0)
-    rails_game.game_state.stub!(:update).with(move)
+    rails_game.game_state.stub!(:update).with(move).and_return(true)
     rails_game.should_receive(:switch_active_player)
     
     rails_game.update(move)

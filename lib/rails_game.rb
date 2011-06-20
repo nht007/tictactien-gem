@@ -12,7 +12,8 @@ class RailsGame < Game
   end
   
   def update(move)
-    switch_active_player if @game_state.update(move)
+#    switch_active_player if @game_state.update(move)
+    switch_active_player if @game_state.perform_move(move)
   end
   
   def print_board

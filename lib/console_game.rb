@@ -23,7 +23,8 @@ class ConsoleGame < Game
         break
       end
       
-      @game_state.active_player.perform_move(@game_state.board)
+      move = ask_move(@game_state.board, @game_state.active_player.token)
+      @game_state.perform_move(move)
       switch_active_player
     end
   end

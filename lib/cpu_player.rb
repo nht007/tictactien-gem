@@ -8,9 +8,10 @@ class CpuPlayer < Player
     @ai = ai  
   end
   
-  def perform_move(board)
-    move = @ai.calculate_move(board, self)
+  def perform_move(game_state, move_param = nil)
+    move = @ai.calculate_move(game_state.board, self)
     
-    board.add_piece(@token, move)
+#    board.add_piece(@token, move)
+    game_state.update(move)
   end
 end
