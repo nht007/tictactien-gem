@@ -7,6 +7,6 @@ class GameState
   end
   
   def update(move)
-    @board.add_piece(@active_player.token, move)
+    return @board.add_piece(@active_player.token, move)
   end
 end
