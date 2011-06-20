@@ -14,4 +14,12 @@ class Game
       @game_state.active_player = @players[:one]
     end
   end
+  
+  def check_win
+    @game_state.check_win
+  end
+  
+  def active_player_class
+    @game_state.active_player_class
+  end
 end

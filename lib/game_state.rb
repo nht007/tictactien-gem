@@ -13,4 +13,12 @@ class GameState
   def update(move)
     return @board.add_piece(@active_player.token, move)
   end
+  
+  def check_win
+    @board.calculate_win
+  end
+  
+  def active_player_class
+    @active_player.class.inspect
+  end
 end
