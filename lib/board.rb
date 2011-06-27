@@ -52,7 +52,23 @@ class Board
   end
   
   def print
-    "\n#{@grid[0]}\n#{@grid[1]}\n#{@grid[2]}\n"
+    disp_grid = [[@grid[0][0], @grid[0][1], @grid[0][2]],
+                 [@grid[1][0], @grid[1][1], @grid[1][2]],
+                 [@grid[2][0], @grid[2][1], @grid[2][2]]]
+    disp_grid[0][0] = " " if @grid[0][0] == nil
+    disp_grid[0][1] = " " if @grid[0][1] == nil
+    disp_grid[0][2] = " " if @grid[0][2] == nil
+    disp_grid[1][0] = " " if @grid[1][0] == nil
+    disp_grid[1][1] = " " if @grid[1][1] == nil
+    disp_grid[1][2] = " " if @grid[1][2] == nil
+    disp_grid[2][0] = " " if @grid[2][0] == nil
+    disp_grid[2][1] = " " if @grid[2][1] == nil
+    disp_grid[2][2] = " " if @grid[2][2] == nil
+    
+    "\n
+    [#{disp_grid[0][0]}][#{disp_grid[0][1]}][#{disp_grid[0][2]}]\n
+    [#{disp_grid[1][0]}][#{disp_grid[1][1]}][#{disp_grid[1][2]}]\n
+    [#{disp_grid[2][0]}][#{disp_grid[2][1]}][#{disp_grid[2][2]}]\n"
   end
   
   private
